@@ -8,6 +8,7 @@ pipeline{
             }
         }
         stage("Testing"){
+            failFast true
             parallel{
                 stage("Run npm security"){
                     steps{
